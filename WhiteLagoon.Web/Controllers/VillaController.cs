@@ -35,6 +35,7 @@ namespace WhiteLagoon.Web.Controllers
             {
                 _db.Villas.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "Villa created successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -59,6 +60,7 @@ namespace WhiteLagoon.Web.Controllers
             {
                 _db.Villas.Update(obj);
                 _db.SaveChanges();
+                TempData["success"]= "Villa updated successfully";
                 return RedirectToAction("Index");
             }
             return View();
@@ -83,8 +85,10 @@ namespace WhiteLagoon.Web.Controllers
             {
                 _db.Villas.Remove(objFromDb);
                 _db.SaveChanges();
+                TempData["success"] ="Villa deleted successfully";
                 return RedirectToAction("Index");
             }
+            TempData["error"] = "Error villa couldn't be deleted";
             return View();
         }
     }
