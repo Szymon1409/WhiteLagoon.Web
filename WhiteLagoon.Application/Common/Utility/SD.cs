@@ -8,5 +8,12 @@ namespace WhiteLagoon.Application.Common.Utility
     {
         public const string Role_Customer = "Customer";
         public const string Role_Admin = "Admin";
+
+        public const string StatusPending = "Pending";
+        public const string StatusApproved = "Approved";
+        public const string StatusCheckIn = "CheckedIn";
+        public const string StatusCompleted = "Completed";
+        public const string StatusCancelled = "Cancelled";
+        public const string StatusRefunded = "Refunded";
     }
 }
